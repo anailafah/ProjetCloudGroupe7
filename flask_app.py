@@ -3,6 +3,10 @@ from password_checker import analyze_password
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "API password checker OK"
+
 @app.route("/check-password", methods=["POST"])
 def check_password():
 
